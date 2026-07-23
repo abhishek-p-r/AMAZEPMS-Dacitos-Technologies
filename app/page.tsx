@@ -12,6 +12,7 @@ import OperationalGallery from '@/components/OperationalGallery';
 import Testimonials from '@/components/Testimonials';
 import CareersSection from '@/components/CareersSection';
 import ContactQuoteModal from '@/components/ContactQuoteModal';
+import ChatbotWidget from '@/components/ChatbotWidget';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -69,6 +70,9 @@ export default function Home() {
         onClose={handleCloseQuoteModal}
         initialNote={quoteInitialNote}
       />
+
+      {/* Floating 24/7 AI Concierge Chatbot */}
+      <ChatbotWidget />
     </main>
   );
 }
