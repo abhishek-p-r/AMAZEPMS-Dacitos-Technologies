@@ -23,16 +23,19 @@ interface ServiceImageProps {
 }
 
 export default function ServiceImage({ src, alt, className = '', iconName = 'Building2' }: ServiceImageProps) {
-  const [hasError, setHasError] = useState(false);
+  const [errorCount, setErrorCount] = useState(0);
   const Icon = iconComponents[iconName] || Layers;
 
-  if (hasError) {
+  const currentSrc = errorCount === 0 
+    ? src 
+    : errorCount === 1 
+      ? '/images/mep_operations.png' 
+      : '/images/hero_building.png';
+
+  if (errorCount >= 3) {
     return (
       <div className={`relative w-full h-full bg-gradient-to-br from-slate-900 via-[#0D1424] to-slate-950 flex flex-col items-center justify-center p-6 border-b border-white/10 overflow-hidden ${className}`}>
-        {/* Ambient radial glow */}
         <div className="absolute inset-0 bg-radial-glow opacity-50" />
-        
-        {/* Subtle decorative grid */}
         <div 
           className="absolute inset-0 opacity-[0.08]" 
           style={{
@@ -40,11 +43,9 @@ export default function ServiceImage({ src, alt, className = '', iconName = 'Bui
             backgroundSize: '16px 16px'
           }} 
         />
-
-        <div className="relative z-10 w-12 h-12 rounded-2xl bg-sky-500/20 border border-sky-500/40 flex items-center justify-center text-sky-400 mb-2 shadow-lg shadow-sky-500/20 animate-pulse">
+        <div className="relative z-10 w-12 h-12 rounded-2xl bg-sky-500/20 border border-sky-500/40 flex items-center justify-center text-sky-400 mb-2 shadow-lg shadow-sky-500/20">
           <Icon className="w-6 h-6" />
         </div>
-
         <span className="relative z-10 text-xs font-bold text-slate-200 font-heading text-center tracking-wide">
           {alt}
         </span>
@@ -57,9 +58,9 @@ export default function ServiceImage({ src, alt, className = '', iconName = 'Bui
 
   return (
     <img
-      src={src}
+      src={currentSrc}
       alt={alt}
-      onError={() => setHasError(true)}
+      onError={() => setErrorCount((prev) => prev + 1)}
       className={className}
     />
   );
