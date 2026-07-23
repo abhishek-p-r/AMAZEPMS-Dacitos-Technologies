@@ -293,10 +293,10 @@ export default function ChatbotWidget() {
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        onClick={() => setIsOpen(!isOpen)}
-        onTouchEnd={(e) => {
+        onClick={(e) => {
           e.preventDefault();
-          setIsOpen(!isOpen);
+          e.stopPropagation();
+          setIsOpen((prev) => !prev);
         }}
         aria-label="Open Amaze AI Assistant"
         className="relative group w-14 h-14 rounded-full bg-gradient-to-tr from-sky-500 via-indigo-500 to-emerald-400 text-slate-950 shadow-2xl shadow-sky-500/50 flex items-center justify-center border-2 border-white/30 cursor-pointer"
