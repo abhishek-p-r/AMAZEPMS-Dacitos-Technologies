@@ -1,0 +1,39 @@
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" rx="24" fill="#080D1A"/>
+  <rect width="800" height="500" rx="24" fill="url(#bg_glow)"/>
+  
+  <!-- Subtle Grid -->
+  <g opacity="0.1">
+    <path d="M0 50H800M0 100H800M0 150H800M0 200H800M0 250H800M0 300H800M0 350H800M0 400H800M0 450H800" stroke="#38BDF8" stroke-width="1"/>
+    <path d="M100 0V500M200 0V500M300 0V500M400 0V500M500 0V500M600 0V500M700 0V500" stroke="#38BDF8" stroke-width="1"/>
+  </g>
+
+  <!-- Central Glass Shield Graphic -->
+  <circle cx="400" cy="230" r="120" fill="url(#circle_grad)" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="2"/>
+  <circle cx="400" cy="230" r="85" fill="#0F172A" stroke="#10B981" stroke-width="2"/>
+  
+  <!-- Bug Shield Icon -->
+  <path d="M400 170 C430 170 450 190 450 230 C450 270 430 290 400 290 C370 290 350 270 350 230 C350 190 370 170 400 170 Z" stroke="#38BDF8" stroke-width="4" fill="none"/>
+  <path d="M370 210 H430 M360 230 H440 M370 250 H430 M400 170 V290" stroke="#38BDF8" stroke-width="3"/>
+  <circle cx="380" cy="195" r="4" fill="#10B981"/>
+  <circle cx="420" cy="195" r="4" fill="#10B981"/>
+
+  <!-- Scanning Rays -->
+  <line x1="280" y1="230" x2="520" y2="230" stroke="#10B981" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- Typography Badge -->
+  <rect x="250" y="380" width="300" height="48" rx="12" fill="#0D1424" stroke="#38BDF8" stroke-opacity="0.3"/>
+  <text x="400" y="410" text-anchor="middle" fill="#F8FAFC" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" letter-spacing="2">HACCP PEST CONTROL & FUMIGATION</text>
+
+  <defs>
+    <radialGradient id="bg_glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400 230) scale(400 250)">
+      <stop stop-color="#10B981" stop-opacity="0.2"/>
+      <stop offset="0.6" stop-color="#38BDF8" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#080D1A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="circle_grad" x1="280" y1="110" x2="520" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#10B981" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+</svg>
