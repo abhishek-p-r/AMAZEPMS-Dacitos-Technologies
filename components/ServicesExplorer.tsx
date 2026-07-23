@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SERVICES_DATA, ServiceItem } from '@/lib/data';
+import ServiceImage from './ServiceImage';
 import {
   Sparkles,
   Wrench,
@@ -108,10 +109,10 @@ export default function ServicesExplorer({ onOpenQuoteModal }: ServicesExplorerP
               >
                 {/* Image Header */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-slate-950">
-                  <img
+                  <ServiceImage
                     src={service.image}
                     alt={service.title}
-                    onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero_building.png'; }}
+                    iconName={service.iconName}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0D1424] via-transparent to-transparent opacity-90" />
@@ -210,10 +211,10 @@ export default function ServicesExplorer({ onOpenQuoteModal }: ServicesExplorerP
               </div>
 
               <div className="aspect-[16/9] rounded-2xl overflow-hidden mb-6 bg-slate-950">
-                <img
+                <ServiceImage
                   src={selectedService.image}
                   alt={selectedService.title}
-                  onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero_building.png'; }}
+                  iconName={selectedService.iconName}
                   className="w-full h-full object-cover"
                 />
               </div>

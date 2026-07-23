@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GALLERY_IMAGES, GalleryItem } from '@/lib/data';
+import ServiceImage from './ServiceImage';
 import { Camera, MapPin, Maximize2, X } from 'lucide-react';
 
 export default function OperationalGallery() {
@@ -71,10 +72,9 @@ export default function OperationalGallery() {
               onClick={() => setActiveImage(img)}
               className="group relative aspect-[4/3] rounded-2xl overflow-hidden glass-card cursor-pointer border border-white/10 hover:border-sky-500/50 shadow-xl"
             >
-              <img
+              <ServiceImage
                 src={img.imageUrl}
                 alt={img.title}
-                onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero_building.png'; }}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
@@ -115,10 +115,9 @@ export default function OperationalGallery() {
               </button>
 
               <div className="aspect-video w-full rounded-2xl overflow-hidden bg-black mb-4">
-                <img
+                <ServiceImage
                   src={activeImage.imageUrl}
                   alt={activeImage.title}
-                  onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero_building.png'; }}
                   className="w-full h-full object-cover"
                 />
               </div>
