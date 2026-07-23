@@ -111,6 +111,7 @@ export default function ServicesExplorer({ onOpenQuoteModal }: ServicesExplorerP
                   <img
                     src={service.image}
                     alt={service.title}
+                    onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero_building.png'; }}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0D1424] via-transparent to-transparent opacity-90" />
@@ -212,6 +213,7 @@ export default function ServicesExplorer({ onOpenQuoteModal }: ServicesExplorerP
                 <img
                   src={selectedService.image}
                   alt={selectedService.title}
+                  onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero_building.png'; }}
                   className="w-full h-full object-cover"
                 />
               </div>

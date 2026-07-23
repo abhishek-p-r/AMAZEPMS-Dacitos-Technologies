@@ -59,7 +59,8 @@ export default function Testimonials() {
                 <img
                   src={t.avatar}
                   alt={t.name}
-                  className="w-12 h-12 rounded-full object-cover border border-sky-400/40"
+                  onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero_building.png'; }}
+                  className="w-full h-full rounded-full object-cover border border-sky-400/40"
                 />
                 <div>
                   <div className="flex items-center gap-1">

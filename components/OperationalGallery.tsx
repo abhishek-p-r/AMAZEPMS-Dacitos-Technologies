@@ -74,6 +74,7 @@ export default function OperationalGallery() {
               <img
                 src={img.imageUrl}
                 alt={img.title}
+                onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero_building.png'; }}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
@@ -117,6 +118,7 @@ export default function OperationalGallery() {
                 <img
                   src={activeImage.imageUrl}
                   alt={activeImage.title}
+                  onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero_building.png'; }}
                   className="w-full h-full object-cover"
                 />
               </div>
