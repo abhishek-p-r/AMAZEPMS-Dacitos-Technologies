@@ -289,12 +289,36 @@ export default function ChatbotWidget() {
         )}
       </AnimatePresence>
 
+      {/* Floating Speech Bubble Prompt */}
+      {!isOpen && (
+        <motion.div
+          initial={{ opacity: 0, x: 10 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5, duration: 0.4 }}
+          onClick={() => setIsOpen(true)}
+          onTouchEnd={(e) => {
+            e.preventDefault();
+            setIsOpen(true);
+          }}
+          className="absolute right-16 top-1.5 whitespace-nowrap px-3.5 py-1.5 rounded-full bg-slate-900/90 backdrop-blur-md border border-sky-500/40 text-xs font-semibold text-sky-300 shadow-xl cursor-pointer hover:bg-slate-800 hover:scale-105 transition-all flex items-center gap-1.5"
+        >
+          <Sparkles className="w-3.5 h-3.5 text-sky-400 animate-pulse" />
+          <span>Chat with AI Assistant</span>
+          <span className="w-2 h-2 rounded-full bg-emerald-400" />
+        </motion.div>
+      )}
+
       {/* Floating Circular Bot Face Trigger Button */}
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="relative group w-14 h-14 rounded-full bg-gradient-to-tr from-sky-500 via-indigo-500 to-emerald-400 text-slate-950 shadow-2xl shadow-sky-500/50 flex items-center justify-center border-2 border-white/30"
+        onTouchEnd={(e) => {
+          e.preventDefault();
+          setIsOpen(!isOpen);
+        }}
+        aria-label="Open Amaze AI Assistant"
+        className="relative group w-14 h-14 rounded-full bg-gradient-to-tr from-sky-500 via-indigo-500 to-emerald-400 text-slate-950 shadow-2xl shadow-sky-500/50 flex items-center justify-center border-2 border-white/30 cursor-pointer"
       >
         <div className="absolute inset-0 rounded-full bg-sky-400/40 blur-md group-hover:blur-xl transition-all animate-pulse" />
         <div className="relative flex items-center justify-center">
