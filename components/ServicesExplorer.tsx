@@ -113,9 +113,9 @@ export default function ServicesExplorer({ onOpenQuoteModal }: ServicesExplorerP
                     src={service.image}
                     alt={service.title}
                     iconName={service.iconName}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-100"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D1424] via-transparent to-transparent opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D1424] via-transparent to-transparent opacity-40 pointer-events-none" />
 
                   {/* Icon Badge */}
                   <div className="absolute top-3 left-3 w-10 h-10 rounded-xl bg-slate-900/90 backdrop-blur-md border border-white/20 flex items-center justify-center text-sky-400 shadow-lg">

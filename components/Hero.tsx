@@ -129,9 +129,9 @@ export default function Hero({ onOpenQuoteModal }: HeroProps) {
                     src="/images/hero_building.png"
                     alt="Amaze PMS Real Estate Property Operations"
                     onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero_building.png'; }}
-                    className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover opacity-100 hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050811] via-transparent to-transparent opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050811] via-transparent to-transparent opacity-30 pointer-events-none" />
 
                   {/* Play Video Modal Trigger */}
                   <button
