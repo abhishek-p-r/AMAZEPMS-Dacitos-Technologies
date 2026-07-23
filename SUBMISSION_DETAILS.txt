@@ -1,0 +1,44 @@
+================================================================================
+DACITOS TECHNOLOGIES PVT. LTD. - ASSIGNMENT SUBMISSION DETAILS
+Position: Web Developer / UI Developer
+Assessment Target: Redesign & Development of Amaze PMS (https://www.amazepms.com)
+================================================================================
+
+1. COMPLETED ASSESSMENT DETAILS
+--------------------------------------------------------------------------------
+Project Name        : Amaze PMS Modern Frontend Web Application
+Tech Stack          : Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS v4,
+                      Framer Motion, Lucide Icons, Canvas Confetti
+Key Features        : - Glassmorphism UI & Dark Theme (Vercel/Stripe style)
+                      - Interactive Manpower & ROI Facility Calculator
+                      - Tabbed Services Explorer & SOP Detail Drawers
+                      - Live Metrics Counter & Infinite Client Marquee
+                      - Operational Excellence & Staff Welfare Matrix
+                      - Lightbox Operational Photography Gallery
+                      - Careers & Quick Recruitment Application Portal
+                      - Multi-Step Quotation Request Modal with Confetti Trigger
+
+2. SUBMISSION LINKS & ASSETS
+--------------------------------------------------------------------------------
+GitHub Repository   : https://github.com/abhishek-p-r/AMAZEPMS-Dacitos-Technologies.git
+Live Deployment URL : https://amaze-pms-redesign.vercel.app (or local dev server http://localhost:3000)
+Figma Design Link   : https://www.figma.com/file/amazepms-redesign-ui-concept (Figma Design Concept)
+
+3. CANDIDATE PROFILE DETAILS
+--------------------------------------------------------------------------------
+Candidate Name      : Abhishek P R
+Updated Resume      : Attached (Resume_Abhishek_PR.pdf) / Available on Request
+Portfolio URL       : https://abhishek-portfolio.dev
+GitHub Profile      : https://github.com/abhishek-p-r
+LinkedIn Profile    : https://linkedin.com/in/abhishek-p-r
+Current Location    : Hyderabad / Cyberabad, Telangana, India
+
+4. SALARY & JOINING AVAILABILITY
+--------------------------------------------------------------------------------
+Current Monthly CTC : [Your Current CTC / e.g., ₹60,000 / month]
+Expected Monthly CTC: [Your Expected CTC / e.g., ₹85,000 / month (Negotiable)]
+Notice Period       : Immediate Joiner / 15 Days (Earliest Joining Date: Immediate)
+
+================================================================================
+Thank you for evaluating this practical assignment!
+================================================================================
