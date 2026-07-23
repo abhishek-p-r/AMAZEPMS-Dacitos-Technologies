@@ -164,7 +164,7 @@ export default function ChatbotWidget() {
             <div className="p-4 bg-slate-900/90 backdrop-blur-md border-b border-white/10 flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="relative">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-emerald-400 flex items-center justify-center text-slate-950 shadow-md">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-sky-500 via-indigo-500 to-emerald-400 flex items-center justify-center text-slate-950 shadow-lg shadow-sky-500/20 border border-white/20">
                     <Bot className="w-6 h-6" />
                   </div>
                   <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-400 border-2 border-slate-900" />
@@ -206,7 +206,7 @@ export default function ChatbotWidget() {
                 >
                   <div className="flex items-end gap-2 max-w-[85%]">
                     {msg.sender === 'bot' && (
-                      <div className="w-7 h-7 rounded-lg bg-sky-500/20 border border-sky-500/40 flex items-center justify-center text-sky-400 shrink-0 mb-1">
+                      <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-sky-500/20 to-emerald-500/20 border border-sky-400/40 flex items-center justify-center text-sky-300 shrink-0 mb-1 shadow-sm">
                         <Bot className="w-4 h-4" />
                       </div>
                     )}
@@ -289,29 +289,26 @@ export default function ChatbotWidget() {
         )}
       </AnimatePresence>
 
-      {/* Floating Trigger Button */}
+      {/* Floating Circular Bot Face Trigger Button */}
       <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="relative group p-4 rounded-2xl bg-gradient-to-r from-sky-500 via-indigo-500 to-emerald-400 text-slate-950 shadow-2xl shadow-sky-500/40 flex items-center justify-center border border-white/20"
+        className="relative group w-14 h-14 rounded-full bg-gradient-to-tr from-sky-500 via-indigo-500 to-emerald-400 text-slate-950 shadow-2xl shadow-sky-500/50 flex items-center justify-center border-2 border-white/30"
       >
-        <div className="absolute inset-0 rounded-2xl bg-sky-400/30 blur-md group-hover:blur-lg transition-all" />
-        <div className="relative flex items-center gap-2">
+        <div className="absolute inset-0 rounded-full bg-sky-400/40 blur-md group-hover:blur-xl transition-all animate-pulse" />
+        <div className="relative flex items-center justify-center">
           {isOpen ? (
-            <X className="w-6 h-6 text-slate-950 font-bold" />
+            <X className="w-7 h-7 text-slate-950 font-bold" />
           ) : (
-            <>
-              <MessageSquare className="w-6 h-6 text-slate-950" />
-              <span className="hidden sm:inline font-bold text-xs tracking-wide font-heading text-slate-950">
-                AI Assistant
-              </span>
-            </>
+            <Bot className="w-7 h-7 text-slate-950 group-hover:rotate-12 transition-transform duration-300" />
           )}
         </div>
 
         {!isOpen && (
-          <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-slate-950 animate-ping" />
+          <span className="absolute top-0 right-0 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-slate-950 shadow-md">
+            <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping opacity-75" />
+          </span>
         )}
       </motion.button>
     </div>
